@@ -11,6 +11,6 @@ public class CepValidator {
         if (cep == null) {
             return false;
         }
-        return pattern.matcher(cep.toString()).matches();
+        return pattern.matcher(cep).matches();
     }
 }
