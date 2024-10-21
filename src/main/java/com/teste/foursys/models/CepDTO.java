@@ -23,7 +23,7 @@ public class CepDTO {
     private String siafi;
     private Boolean erro = false;
     private String message;
-    private int code = 0;
+    private int code = 200;
 
     public CepDTO(String message, int code, Boolean erro) {
         this.message = message;

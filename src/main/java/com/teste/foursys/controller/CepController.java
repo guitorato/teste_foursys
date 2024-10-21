@@ -19,9 +19,9 @@ public class CepController {
     public ResponseEntity<?> buscarCep(@PathVariable String cep) {
 
         CepDTO dto = cepService.getCep(cep);
-        if (dto.getCode() != 0) {
+        if (dto.getCode() != 200) {
             return ResponseEntity.status(dto.getCode()).body(new ErrorResponseDTO(dto.getMessage()));
         }
-        return ResponseEntity.ok(cepService.getCep(cep));
+        return ResponseEntity.ok(dto);
     }
 }
